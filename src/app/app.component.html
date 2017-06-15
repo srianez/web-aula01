@@ -1,7 +1,7 @@
 <!--The whole content below can be removed with the new code.-->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4" id="menu">
+    <div class="col-md-4 sidebar" id="menu">
       <header>
         <div id="menu-titulo">
           <h1>Code Noda</h1>
@@ -22,6 +22,42 @@
         </nav>
       </header>  
     </div>
-    <div class="col-md-8" id="conteudo">conteudo</div>
+    <div class="col-md-8 offset-md-4" id="conteudo">
+      <article id="sobre-mim" class="row">
+        <div class="col-md-12">
+          <h1>Sobre mim</h1>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          </div>
+        </div>
+      </article>
+      <section id="artigos" class="row">
+        <div class="col-md-6">
+          <div class="p-3"></div>
+          <article class="card artigo">
+            <div class="card-block">
+              <h2 class="card-title">Artigo 1</h2>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3"></div>
+          <article class="card artigo">
+            <div class="card-block">
+              <h2 class="card-title">Artigo 2</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              </p>
+              <button class="btn btn-primary">Ler mais...</button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <app-contato>
+      </app-contato>
+    </div>
   </div>
 </div>
