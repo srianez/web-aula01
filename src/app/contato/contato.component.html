@@ -6,22 +6,38 @@
         <p class="card-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
         </p>
+
         <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
+          
           <div class="form-group">
             <input type="text" class="form-control"
                 formControlName="nome" placeholder="nome" required>
           </div>
+          
           <div class="form-group">
             <input type="email" class="form-control"
                 formControlName="email" placeholder="e-mail" required>
           </div>
+          
           <div class="form-group">
             <textarea class="form-control" formControlName="texto"
                 rows="3" placeholder="Deixe um comentário" required
                 minlength="5" maxlength="100">
             </textarea>
           </div>
+
+        <div *ngFor="let err of listaErros;">
+          <div class="alert alert-danger">{{err.texto}}</div> 
+        </div>
+
+        <div *ngFor="let err of listaResultado;">
+          <div [ngClass]="{'alert-success' : err.sucesso, 'alert-danger': !err.sucesso}"
+          class="alert">{{err.texto}}</div> 
+        </div>
+
           <button type="submit" class="btn btn-primary">Submit</button>
+
+
         </form>
       </div>
     </div>
